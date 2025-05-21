@@ -1,0 +1,122 @@
+
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a1a;
+            color: #fff;
+            line-height: 1.6;
+        }
+                
+        /* Шапка */
+        header {
+            background: linear-gradient(90deg, #1a1a3a, #2a0a4a);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+                
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+                
+        .logo-img {
+            height: 60px;
+            margin-right: 20px;
+            transition: transform 0.3s;
+        }
+                
+        .logo-img:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+                
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b00, #ff00aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+            line-height: 1;
+        }
+                
+        /* Основной контейнер */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        section {
+            background: rgba(30, 30, 60, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: #ff6b00;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #ff6b00;
+            padding-bottom: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+
+        ul ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
+        }
+    
